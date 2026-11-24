@@ -8,7 +8,7 @@ export const imageSize = {
 export const imageContentType = "image/png";
 
 export const imageAlt =
-  "Sandeepa Singh, independent frontend engineer. React, Next.js and TypeScript. Based in India, working worldwide.";
+  "Sandeepa Singh, frontend engineer. React, Next.js and TypeScript. Based in India, open to full-time roles.";
 
 export const createSocialImage = () =>
   new ImageResponse(
@@ -47,7 +47,7 @@ export const createSocialImage = () =>
               color: "#564F47",
             }}
           >
-            Independent Frontend Engineer
+            Frontend Engineer · Open to roles
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div
@@ -80,7 +80,7 @@ export const createSocialImage = () =>
               color: "#564F47",
             }}
           >
-            React · Next.js · TypeScript · India, working worldwide
+            React · Next.js · TypeScript · India, open to remote
           </div>
         </div>
       </div>

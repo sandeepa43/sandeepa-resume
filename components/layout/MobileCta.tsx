@@ -32,7 +32,7 @@ export const MobileCta = () => {
         href="#contact"
         className="pointer-events-auto inline-flex min-h-12 w-full max-w-sm items-center justify-center rounded-full bg-gradient-to-r from-mint to-violet px-5 text-sm font-medium text-[#07111f] shadow-[0_16px_40px_-12px_rgba(139,108,255,0.85)]"
       >
-        Let&apos;s Discuss Your Project
+        Get in Touch
       </a>
     </div>
   );

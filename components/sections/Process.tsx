@@ -14,7 +14,7 @@ export const Process = () => {
       <Container className="py-24 md:py-32">
         <SectionHeading
           eyebrow="05 — Process"
-          title="From idea to production"
+          title="How I take work from idea to production"
           headingId="process-heading"
           description="Four steps. Open any of them."
         />

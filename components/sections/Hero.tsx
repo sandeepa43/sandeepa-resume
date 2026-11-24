@@ -22,11 +22,7 @@ export const Hero = () => (
             <span className="relative size-2 rounded-full bg-mint" />
           </span>
           <span>
-            <span className="sm:hidden">
-              Available for contracts
-              <br />
-              & collaborations
-            </span>
+            <span className="sm:hidden">Open to full-time roles</span>
             <span className="hidden sm:inline">{site.availability}</span>
           </span>
         </p>
@@ -44,13 +40,12 @@ export const Hero = () => (
           aria-hidden="true"
         />
         <p className="mt-7 max-w-xl text-base leading-7 text-ink-soft sm:text-lg sm:leading-8">
-          I&apos;m Sandeepa, an independent frontend engineer with 5+ years of
-          experience helping startups turn ideas into scalable, production-ready
-          web applications.
+          I&apos;m Sandeepa, a frontend engineer with 5+ years of experience
+          building scalable, production-ready web applications.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button href="#contact" className="w-full sm:w-auto">
-            Start a Project
+            Get in Touch
             <ArrowRight aria-hidden="true" size={16} />
           </Button>
           <Button href="#tools" variant="secondary" className="w-full sm:w-auto">

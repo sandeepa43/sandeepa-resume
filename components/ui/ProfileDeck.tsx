@@ -6,7 +6,7 @@ import { SkillButton } from "@/components/ui/SkillButton";
 const stats = [
   { value: "5+", label: "Years" },
   { value: "React", label: "Next.js" },
-  { value: "India", label: "Worldwide" },
+  { value: "India", label: "Remote" },
 ] as const;
 
 export const ProfileDeck = () => {
@@ -46,7 +46,7 @@ export const ProfileDeck = () => {
           <span className="absolute inline-flex size-full rounded-full bg-mint opacity-50 motion-safe:animate-ping" />
           <span className="relative size-2 rounded-full bg-mint" />
         </span>
-        Open for contracts
+        Open to full-time roles
       </p>
       <ul className="relative mt-6 grid grid-cols-3 gap-2">
         {stats.map((stat) => (

@@ -14,10 +14,10 @@ export const Services = () => {
     <section id="services" aria-labelledby="services-heading" className="border-t border-line">
       <Container className="py-24 md:py-32">
         <SectionHeading
-          eyebrow="03 — Services"
-          title="How I can help your team"
+          eyebrow="03 — Focus"
+          title="Where I can contribute"
           headingId="services-heading"
-          description="Choose an engagement. It carries into the inquiry so we start from the same brief."
+          description="Choose a focus. It carries into the note so we start from the same kind of role."
         />
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {services.map((service) => {
@@ -67,10 +67,10 @@ export const Services = () => {
         <div className="mt-10 flex flex-col items-start justify-between gap-5 border-t border-line pt-8 sm:flex-row sm:items-center">
           <p className="max-w-md text-sm leading-6 text-ink-soft">
             {engagement
-              ? `${engagement} is selected. Tell me about the product and the timeline.`
-              : "Tell me about the product, the timeline and how you prefer to work."}
+              ? `${engagement} is selected. Tell me about the team and the role.`
+              : "Tell me about the team, the product and the role you are hiring for."}
           </p>
-          <Button href="#contact">Discuss Your Project</Button>
+          <Button href="#contact">Talk about a role</Button>
         </div>
       </Container>
     </section>

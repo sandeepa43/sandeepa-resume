@@ -18,9 +18,9 @@ export const Contact = () => (
         <div className="lg:col-span-5">
           <SectionHeading
             eyebrow="06 — Contact"
-            title="Have a product in mind? Let's build it."
+            title="Hiring a frontend engineer?"
             headingId="contact-heading"
-            description="Whether you're building a new SaaS product, scaling an existing application or looking for a dedicated frontend engineering partner, I'd love to hear about it."
+            description="If you are building a product team and need someone who has shipped React and Next.js in production, I would like to hear about the role."
           />
           <p className="mt-5 max-w-md text-base leading-7 text-ink-soft">
             {site.availabilityDetail}

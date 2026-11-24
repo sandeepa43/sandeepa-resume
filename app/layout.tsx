@@ -27,7 +27,7 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-const pageTitle = "Sandeepa Singh — Independent Frontend Engineer";
+const pageTitle = "Sandeepa Singh — Frontend Engineer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   creator: site.name,
   keywords: [
     "Sandeepa Singh",
-    "Independent Frontend Engineer",
+    "Frontend Engineer",
     "React Developer",
     "Next.js Developer",
-    "Frontend Contractor",
+    "Open to Work",
     "SaaS Frontend",
     "TypeScript",
     "React Native",

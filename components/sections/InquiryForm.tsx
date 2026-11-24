@@ -51,34 +51,34 @@ const validate = (values: FormValues): FormErrors => {
   }
 
   if (oneLine(values.company).length < 2) {
-    errors.company = "Add a company, startup, or “Independent”.";
+    errors.company = "Add the hiring company.";
   }
 
   if (!values.projectType) {
-    errors.projectType = "Select a project type.";
+    errors.projectType = "Select a role focus.";
   }
 
   if (!values.budget) {
-    errors.budget = "Select a budget range, or “Not sure yet”.";
+    errors.budget = "Select a work setup, or “Not sure yet”.";
   }
 
   if (values.description.trim().length === 0) {
-    errors.description = "Tell me a little about the project.";
+    errors.description = "Tell me a little about the role.";
   } else if (values.description.trim().length < 20) {
-    errors.description = "Add a sentence or two about what you're building.";
+    errors.description = "Add a sentence or two about the role.";
   }
 
   return errors;
 };
 
 const buildMailto = (values: FormValues) => {
-  const subject = `Project inquiry from ${oneLine(values.name)} (${oneLine(values.company)})`;
+  const subject = `Role inquiry from ${oneLine(values.name)} (${oneLine(values.company)})`;
   const body = [
     `Name: ${oneLine(values.name)}`,
     `Email: ${values.email.trim()}`,
     `Company: ${oneLine(values.company)}`,
-    `Project type: ${values.projectType}`,
-    `Estimated budget: ${values.budget}`,
+    `Role focus: ${values.projectType}`,
+    `Work setup: ${values.budget}`,
     "",
     values.description.trim(),
   ].join("\n");
@@ -173,11 +173,11 @@ export const InquiryForm = () => {
     errors[field] ? `${field}-error` : undefined;
 
   return (
-    <form aria-label="Project inquiry" noValidate onSubmit={handleSubmit} className="space-y-5">
+    <form aria-label="Role inquiry" noValidate onSubmit={handleSubmit} className="space-y-5">
       {engagement ? (
         <p className="rounded-2xl border border-violet/40 bg-violet/10 px-4 py-3 text-sm leading-6 text-ink">
-          Engagement selected: <span className="font-medium text-mint">{engagement}</span>.
-          The project type is filled from that choice. Change it if you need to.
+          Focus selected: <span className="font-medium text-mint">{engagement}</span>.
+          The role focus is filled from that choice. Change it if you need to.
         </p>
       ) : null}
 
@@ -222,14 +222,14 @@ export const InquiryForm = () => {
         />
       </Field>
 
-      <Field id="company" label="Company / Startup" error={errors.company}>
+      <Field id="company" label="Hiring company" error={errors.company}>
         <input
           id="company"
           name="company"
           type="text"
           autoComplete="organization"
           value={values.company}
-          placeholder="Company, startup, or Independent"
+          placeholder="Company or team name"
           aria-invalid={errors.company ? true : undefined}
           aria-describedby={describedBy("company")}
           aria-required="true"
@@ -241,7 +241,7 @@ export const InquiryForm = () => {
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
           id="projectType"
-          label="Project type"
+          label="Role focus"
           error={projectType ? undefined : errors.projectType}
         >
           <div className="relative">
@@ -262,7 +262,7 @@ export const InquiryForm = () => {
                 errors.projectType && "border-danger",
               )}
             >
-              <option value="">Select a project type</option>
+              <option value="">Select a role focus</option>
               {projectTypes.map((type) => (
                 <option key={type} value={type}>
                   {type}
@@ -277,7 +277,7 @@ export const InquiryForm = () => {
           </div>
         </Field>
 
-        <Field id="budget" label="Estimated budget" error={errors.budget}>
+        <Field id="budget" label="Work setup" error={errors.budget}>
           <div className="relative">
             <select
               id="budget"
@@ -293,7 +293,7 @@ export const InquiryForm = () => {
                 errors.budget && "border-danger",
               )}
             >
-              <option value="">Select a range</option>
+              <option value="">Select a work setup</option>
               {budgetRanges.map((range) => (
                 <option key={range} value={range}>
                   {range}
@@ -309,13 +309,13 @@ export const InquiryForm = () => {
         </Field>
       </div>
 
-      <Field id="description" label="Project description" error={errors.description}>
+      <Field id="description" label="About the role" error={errors.description}>
         <textarea
           id="description"
           name="description"
           rows={5}
           value={values.description}
-          placeholder="What are you building, and what do you need help with?"
+          placeholder="What role are you hiring for, and what would I work on?"
           aria-invalid={errors.description ? true : undefined}
           aria-describedby={describedBy("description")}
           aria-required="true"
@@ -329,15 +329,15 @@ export const InquiryForm = () => {
       </Field>
 
       <p className="text-sm leading-6 text-muted">
-        A rough budget is enough. This opens your email app with the details above.
-        Nothing is sent or stored from this site.
+        This opens your email app with the details above. Nothing is sent or stored
+        from this site.
       </p>
 
       <button
         type="submit"
         className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-mint to-violet px-6 text-sm font-medium text-[#07111f] transition duration-200 hover:from-amber hover:to-coral motion-reduce:transition-none sm:w-auto"
       >
-        Let&apos;s Discuss Your Project
+        Send a Note
       </button>
 
       {opened ? (

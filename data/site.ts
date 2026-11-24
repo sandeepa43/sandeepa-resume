@@ -1,17 +1,17 @@
 export const site = {
   name: "Sandeepa Singh",
-  title: "Independent Frontend Engineer",
+  title: "Frontend Engineer",
   email: "sandeepasingh686@gmail.com",
   phone: "+918287781483",
   phoneDisplay: "+91 82877 81483",
   linkedin: "https://www.linkedin.com/in/sandeepa04/",
   github: "https://github.com/Sandeepa04",
-  location: "India · Working Worldwide",
-  availability: "Available for contracts & collaborations",
+  location: "India · Open to remote roles",
+  availability: "Open to full-time roles",
   availabilityDetail:
-    "Open to long-term contracts, freelance projects and startup collaborations.",
+    "Looking for a frontend engineering role on a product team. Open to remote work and teams hiring in India.",
   description:
-    "Independent frontend engineer with 5+ years of experience helping startups design, build and scale production-ready web applications with React, Next.js and TypeScript. Based in India, working worldwide.",
+    "Frontend engineer with 5+ years of experience building production web applications with React, Next.js and TypeScript. Based in India and open to full-time roles.",
   /**
    * Set NEXT_PUBLIC_SITE_URL in production, for example https://your-domain.com.
    * Used for canonical links, Open Graph, the sitemap and robots.txt.
@@ -21,13 +21,13 @@ export const site = {
     "http://localhost:3000",
 } as const;
 
-export const emailHref = `mailto:${site.email}?subject=${encodeURIComponent("Project inquiry")}`;
+export const emailHref = `mailto:${site.email}?subject=${encodeURIComponent("Opportunity for Sandeepa Singh")}`;
 
 export const navLinks = [
   { id: "home", label: "Home", href: "#home" },
   { id: "tools", label: "Skills", href: "#tools" },
   { id: "work", label: "Work", href: "#work" },
-  { id: "services", label: "Services", href: "#services" },
+  { id: "services", label: "Focus", href: "#services" },
   { id: "about", label: "About", href: "#about" },
   { id: "contact", label: "Contact", href: "#contact" },
 ] as const;
@@ -43,8 +43,8 @@ export const featuredSkills = [
 
 export const heroFacts = [
   "5+ Years Experience",
-  "React & Next.js Specialist",
-  "India Based · Working Worldwide",
+  "React & Next.js",
+  "Open to full-time roles",
 ] as const;
 
 export type ProjectVisual = "educator" | "crm" | "procurement" | "trading";
@@ -127,43 +127,43 @@ export type Service = {
   value: string;
   technologies: readonly string[];
   projectType:
-    | "New SaaS or MVP"
-    | "Existing product"
-    | "Design system"
-    | "Long-term contract"
+    | "Product team"
+    | "Startup"
+    | "Design system team"
+    | "Full-time role"
     | "Not sure yet";
 };
 
 export const services: readonly Service[] = [
   {
     number: "01",
-    title: "Dedicated Frontend Engineering",
+    title: "Product Frontend",
     description:
-      "Build and scale frontend applications with React, Next.js and TypeScript.",
+      "Own product surfaces in React, Next.js and TypeScript.",
     value:
-      "For teams that need an engineer who can own a product surface, work with the people already on it, and ship production UI.",
+      "I like joining a team that already has a product and needs someone who can ship UI, review code, and stay close to the people using it.",
     technologies: ["React.js", "Next.js", "TypeScript", "React Native"],
-    projectType: "Long-term contract",
+    projectType: "Product team",
   },
   {
     number: "02",
-    title: "SaaS MVP Development",
+    title: "SaaS Interfaces",
     description:
-      "Help founders transform product ideas and Figma designs into functional, production-ready applications.",
+      "Turn product ideas and designs into working application screens.",
     value:
-      "For early products that need a working application in front of users, with a codebase that can keep growing.",
+      "I've built onboarding, dashboards and workflows for startups that needed a reliable frontend in production.",
     technologies: ["Next.js", "React.js", "Tailwind CSS", "REST APIs"],
-    projectType: "New SaaS or MVP",
+    projectType: "Startup",
   },
   {
     number: "03",
-    title: "Frontend Architecture & Design Systems",
+    title: "Design Systems",
     description:
-      "Create reusable component libraries, improve existing codebases and establish scalable frontend architecture.",
+      "Build shared components and keep a growing interface consistent.",
     value:
-      "For products whose interface is moving faster than the code, and teams that need components they can share.",
+      "I'm comfortable in a codebase that needs a component library, Storybook, and clearer frontend structure.",
     technologies: ["Storybook", "TypeScript", "Material UI", "Redux", "GraphQL"],
-    projectType: "Design system",
+    projectType: "Design system team",
   },
 ];
 
@@ -208,17 +208,17 @@ export const techGroups: readonly TechGroup[] = [
 ];
 
 export const aboutParagraphs = [
-  "I'm a frontend engineer who enjoys solving complex product problems through thoughtful UI engineering.",
-  "Over the past five years, I've worked with startups and product teams to build applications from the ground up, improve existing products and create reusable frontend architectures.",
-  "I enjoy working at the intersection of product thinking, design and engineering — where good architecture meets great user experience.",
-  "I'm comfortable taking ownership of features, collaborating with designers and backend engineers, reviewing code and contributing to technical decisions.",
+  "I'm a frontend engineer who enjoys solving product problems through careful UI engineering.",
+  "Over the past five years I've worked with startups and product teams, building applications, improving existing products, and creating reusable frontend architecture.",
+  "I like the place where product, design and engineering meet.",
+  "I'm looking for a full-time role where I can own features, work with designers and backend engineers, and contribute to technical decisions.",
 ] as const;
 
 export const workingPrinciples = [
   {
-    title: "Independent",
+    title: "Ownership",
     description:
-      "I can take a frontend problem from requirements through implementation, and work without a large team around me.",
+      "I take a feature from the requirement through implementation and stay with it after it ships.",
   },
   {
     title: "Product-focused",
@@ -226,9 +226,9 @@ export const workingPrinciples = [
       "I start from the workflow and the person using it, then shape the interface and the code around that.",
   },
   {
-    title: "Remote collaboration",
+    title: "Team collaboration",
     description:
-      "I'm used to working with founders, designers and engineers across distributed teams and time zones.",
+      "I'm used to working with designers and engineers on distributed product teams.",
   },
   {
     title: "Built to maintain",
@@ -261,19 +261,19 @@ export const processSteps = [
 ] as const;
 
 export const projectTypes = [
-  "New SaaS or MVP",
-  "Existing product",
-  "Design system",
-  "Long-term contract",
+  "Product team",
+  "Startup",
+  "Design system team",
+  "Full-time role",
   "Not sure yet",
 ] as const;
 
 export const budgetRanges = [
   "Not sure yet",
-  "Under $3,000",
-  "$3,000 – $8,000",
-  "$8,000 – $20,000",
-  "$20,000+",
+  "Remote",
+  "Hybrid",
+  "On-site in India",
+  "Open to relocation",
 ] as const;
 
 export const personJsonLd = {
@@ -298,12 +298,4 @@ export const personJsonLd = {
     "Frontend architecture",
     "Design systems",
   ],
-  makesOffer: services.map((service) => ({
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name: service.title,
-      description: service.description,
-    },
-  })),
 };
